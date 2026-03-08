@@ -1,38 +1,12 @@
-body{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
 }
-.Header{
-    background: teal;
-    padding: 21.84px 0;
-}
-.logo{
-    width: 145px;
-    height: auto;
-}
-.Menu ul{
-    list-style: none;
-    display: flex;
-    gap: 60px;
-    margin: 0;
-    padding: 0;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-.HeaderRight ul{
-    list-style: none;
-    display: flex;
-    gap: 24px;
-    margin: 0;
-    padding: 0;
-}
-a {
-    text-decoration: none;
-    color:#3A3845
+html{
+    --primary-color: #3A3845;
 }
 
 /* ---------------------------------------------- */
@@ -50,6 +24,34 @@ a {
 
 /* ---------------------------------------------- */
 
+.Header{
+    padding: 21.84px 0;
+}
+.logo{
+    width: 145px;
+    height: auto;
+}
+.Menu ul{
+    list-style: none;
+    display: flex;
+    gap: 60px;
+    margin: 0;
+    padding: 0;
+}
+.Menu a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.HeaderRight ul{
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------------------------------------- */
+
 .items{
     gap: 30px;
     padding:30px 0
@@ -63,11 +65,7 @@ a {
     width: 100%;
     height: auto;
 }
-h3 {
-    margin-top:24px;
-    color:#3A3845;
-    font-style: semi-bold;
+.item h2{
     font-size: 18px;
-    font-style: normal;
-    padding: 0;
+    text-transform: uppercase;
 }

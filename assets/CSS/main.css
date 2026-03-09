@@ -12,7 +12,7 @@ html{
 /* ---------------------------------------------- */
 
 .container{
-    width: calc(100% - 330px);
+    width: calc(100% - 20%);
     margin: 0 auto;
 }
 .row{
@@ -26,6 +26,9 @@ html{
 
 .Header{
     padding: 21.84px 0;
+}
+.menu-icon{
+    display: none;
 }
 .logo{
     width: 145px;
@@ -72,12 +75,36 @@ html{
 
 /* ---------------------------------------------- */    
 
-@media screen and (min-width:0px) and (max-width: 1000px){
-    .Menu ul {
+@media screen and (min-width:0px) and (max-width: 996px){
+    .Menu {
         display: none;
     }
 
-    .HeaderRight ul {
+    .HeaderRight {
         display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+@media screen and (min-width:0px) and (max-width: 400px){
+    .items .row{
+        flex-direction: column;
+    }
+    .item{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:401px) and (max-width: 770px){
+     .item{
+        width: calc((100% - 60px)/2 );
+    }
+}
+@media screen and (min-width:771px) and (max-width: 900px){
+    .item{
+        width: calc((100% - 60px)/3 );
     }
 }

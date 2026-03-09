@@ -62,6 +62,10 @@ h6 {
     color: var(--primary-color);
 }
 
+.Header a:hover {
+    color: #807F86;
+}
+
 /* ---------------------------------------------- */
 
 .items{
@@ -150,6 +154,13 @@ h6 {
     border: #3A3845 1px solid;
     width: 100%;
 }
+
+.best_sellers .add-to-cart:hover{
+    background-color: #3A3845;
+    color: white;
+    cursor: pointer;
+}
+
 /* ---------------------------------------------- */ 
 
 @media screen and (min-width:0px) and (max-width: 1024px){

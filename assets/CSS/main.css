@@ -2,11 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
 }
 html{
     --primary-color: #3A3845;
+    --primary-font: "Inter", sans-serif;
 }
 
 /* ---------------------------------------------- */
@@ -41,16 +40,17 @@ html{
     margin: 0;
     padding: 0;
 }
-.Menu a {
-    text-decoration: none;
-    color: var(--primary-color);
-}
 .HeaderRight ul{
     list-style: none;
     display: flex;
     gap: 24px;
     margin: 0;
     padding: 0;
+}
+.Header a {
+    text-decoration: none;
+    font: 14px var(--primary-font);
+    color: var(--primary-color);
 }
 
 /* ---------------------------------------------- */
@@ -103,6 +103,7 @@ html{
         width: calc((100% - 60px)/2 );
     }
 }
+
 @media screen and (min-width:771px) and (max-width: 900px){
     .item{
         width: calc((100% - 60px)/3 );

@@ -8,6 +8,15 @@ html{
     --primary-font: "Inter", sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "EB Garamond", serif;
+}
+
 /* ---------------------------------------------- */
 
 .container{
@@ -16,9 +25,9 @@ html{
 }
 .row{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 /* ---------------------------------------------- */
@@ -74,6 +83,68 @@ html{
 }
 
 /* ---------------------------------------------- */    
+
+.best_sellers{
+    text-align: center;
+    padding: 80px 0;
+}
+
+.best_sellers .row{
+    gap: 30px;
+}
+
+.best_sellers .sellers_item{
+    text-align: left;
+    width: calc((100% - 90px) / 4);
+    margin-bottom: 40px;
+}
+
+.best_sellers h2{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+}
+
+.best_sellers h3{
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 6%;
+    text-transform: uppercase;
+}
+
+.best_sellers .price{
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.best_sellers .description{
+    font-family: var(--primary-font);
+    font-size: 14px;
+    font-weight: 400;
+    color: #807F86;
+    margin-bottom: 58px;
+    width: 70%;
+}
+
+.best_sellers .add-to-cart{
+    font-family: var(--primary-font);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 8%;
+    text-transform: uppercase;
+    padding: 15px 81.5px;
+    background-color: white;
+    border: #3A3845 1px solid;
+}
+/* ---------------------------------------------- */ 
 
 @media screen and (min-width:0px) and (max-width: 996px){
     .Menu {

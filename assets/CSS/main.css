@@ -37,6 +37,7 @@ h6 {
     width: 100%;
     background: white;
     position: fixed;
+    z-index: 9;
 }
 .menu-icon{
     display: none;
@@ -66,9 +67,26 @@ h6 {
     transition-property: background-color, color;
     transition-duration: 0.6s;
 }
-
 .Header a:hover {
     color: #807F86;
+}
+.HeaderRight .cart a{
+    position: relative;
+}
+.HeaderRight .cart a::after{
+    content:'3';
+    position: absolute;
+    top: -14px;
+    left: 14px;
+    background: red;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 500;
+    color:white;
 }
 
 /* ---------------------------------------------- */
@@ -137,18 +155,52 @@ h6 {
     padding:30px 0
 }
 .items .item{
+    position: relative;
     width: calc((100% - 90px)/4 );
     text-align: center;
     color:#3A3845;
+    overflow: hidden;
 }
 .items .item img{
+    display: block;
     width: 100%;
-    height: auto;
 }
 .items .item h2{
-    font-size: 18px;
+    font-size: 24px;
+    letter-spacing: 10%;
     font-family: var(--primary-font);
     text-transform: uppercase;
+}
+.items .item .sale_badge{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #3A3845;
+    color: white;
+    font-family: var(--primary-font);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 8%;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    z-index: 1;
+}
+.items .item .details{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(199, 187, 182, 0.7);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.6s;
+}
+.item:hover .details {
+    opacity: 1;
 }
 
 /* ---------------------------------------------- */    
@@ -157,29 +209,24 @@ h6 {
     text-align: center;
     padding: 80px 0;
 }
-
 .best_sellers .row{
     gap: 30px;
 }
-
 .best_sellers .item{
     text-align: left;
     width: calc((100% - 90px) / 4);
     margin-bottom: 40px;
 }
-
 .best_sellers .item img{
     width: 100%;
     height: auto;
 }
-
 .best_sellers h2{
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 48px;
 }
-
 .best_sellers h3{
     font-family: var(--primary-font);
     color: var(--primary-color);
@@ -189,7 +236,6 @@ h6 {
     text-transform: uppercase;
     margin-top: 24px;
 }
-
 .best_sellers .price{
     font-family: var(--primary-font);
     color: var(--primary-color);
@@ -199,7 +245,6 @@ h6 {
     margin-top: 12px;
     margin-bottom: 24px;
 }
-
 .best_sellers .description{
     font-family: var(--primary-font);
     font-size: 14px;
@@ -207,7 +252,6 @@ h6 {
     color: #807F86;
     margin-bottom: 58px;
 }
-
 .best_sellers .add-to-cart{
     font-family: var(--primary-font);
     font-size: 12px;
@@ -221,13 +265,21 @@ h6 {
     transition-property: background-color, color;
     transition-duration: 0.6s;
 }
-
 .best_sellers .add-to-cart:hover{
     background-color: #3A3845;
     color: white;
     cursor: pointer;
 }
 
+/* ---------------------------------------------- */ 
+.tariq img{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 20%;
+    height: auto;
+    filter: drop-shadow(4px 0 10px rgba(0,0,0,0.9));
+}
 /* ---------------------------------------------- */ 
 
 @media screen and (min-width:0px) and (max-width: 1024px){
@@ -242,7 +294,6 @@ h6 {
         order: 1;
     }
 }
-
 @media screen and (min-width:0px) and (max-width: 425px){
     .container{
         width: calc(100% - 20%);
@@ -265,7 +316,6 @@ h6 {
         font-size: 11px;
     }
 }
-
 @media screen and (min-width:426px) and (max-width: 768px){
     .container{
         width: calc(100% - 20%);
@@ -280,6 +330,9 @@ h6 {
 }
 
 @media screen and (min-width:769px) and (max-width: 1024px){
+    .container{
+        width: calc(100% - 20%);
+    }
     .items .item{
         width: calc((100% - 60px)/2 );
         margin-bottom: 30px;
@@ -288,7 +341,6 @@ h6 {
         width: calc((100% - 30px)/2 );
     }
 }
-
 @media screen and (min-width:1025px) and (max-width: 1440px){
     .container{
         width: calc(100% - 30%);

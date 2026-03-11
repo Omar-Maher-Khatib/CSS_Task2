@@ -205,19 +205,41 @@ h6 {
 }
 
 /* ---------------------------------------------- */ 
-
-.sales .grid-items{
+.sales,.blog{
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.blog span{
+    font-family: var(--primary-font);
+    color: #807F86;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 8%;
+    text-transform: uppercase;
+    padding-bottom: 18px;
+}
+.blog h2,.sales h2{
+    color: var(--primary-color);
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+}
+.sales .grid-items,.blog .grid-items{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
     height: auto;
-    margin-top: 50px;
 }
-.sales .grid-item img{
+.sales .grid-item img,.blog .grid-item img{
     width: 100%;
     height: 100%;
 }
-.sales .grid-item-l{
+.sales .grid-item-l,.blog .grid-item-l{
     width: 100%;
     height: 100%;
     display: flex;
@@ -228,15 +250,15 @@ h6 {
     padding: 0 78.5px ;
     background: #F7F6F5;
 }
-.sales .grid-item-l h3{
+.sales .grid-item-l h3,.blog .grid-item-l h3{
     font-size: 28px;
-    letter-spacing: 4%;
-    font-weight: 600;
+    letter-spacing: 8%;
+    font-weight: 700;
     color: var(--primary-color);
     text-transform: uppercase;
     margin-bottom: 24px;
 }
-.sales .grid-item-l p{
+.sales .grid-item-l p,.blog .grid-item-l p{
     font-family: var(--primary-font);
     color: #595667;
     letter-spacing: 2%;
@@ -244,7 +266,7 @@ h6 {
     font-weight: 400;
     margin-bottom: 42px;    
 }
-.sales .shop-now{
+.sales .shop-now,.blog .read-more{
     font-family: var(--primary-font);
     color: var(--primary-color);
     font-size: 14px;
@@ -260,29 +282,30 @@ h6 {
 
 /* ---------------------------------------------- */  
 
-.best_sellers{
+.best_sellers,.discover{
     text-align: center;
     padding: 80px 0;
 }
-.best_sellers .row{
+.best_sellers .row,.discover .row{
     gap: 30px;
 }
-.best_sellers .item{
+.best_sellers .item,.discover .item{
     text-align: left;
     width: calc((100% - 90px) / 4);
     margin-bottom: 40px;
 }
-.best_sellers .item img{
+.best_sellers .item img,.discover .item img{
     width: 100%;
     height: auto;
 }
-.best_sellers h2{
+.best_sellers h2,.discover h2{
+    color: var(--primary-color);
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 48px;
 }
-.best_sellers h3{
+.best_sellers h3,.discover h3{
     font-family: var(--primary-font);
     color: var(--primary-color);
     font-size: 14px;
@@ -291,7 +314,7 @@ h6 {
     text-transform: uppercase;
     margin-top: 24px;
 }
-.best_sellers .price{
+.discover .price,.best_sellers .price{
     font-family: var(--primary-font);
     color: var(--primary-color);
     display: flex;
@@ -300,14 +323,14 @@ h6 {
     margin-top: 12px;
     margin-bottom: 24px;
 }
-.best_sellers .description{
+.best_sellers .description, .discover .description{
     font-family: var(--primary-font);
     font-size: 14px;
     font-weight: 400;
     color: #807F86;
     margin-bottom: 58px;
 }
-.best_sellers .add-to-cart{
+.best_sellers .add-to-cart ,.discover .add-to-cart{
     font-family: var(--primary-font);
     font-size: 12px;
     font-weight: 500;
@@ -320,7 +343,7 @@ h6 {
     transition-property: background-color, color;
     transition-duration: 0.6s;
 }
-.best_sellers .add-to-cart:hover{
+.discover .add-to-cart:hover, .best_sellers .add-to-cart:hover{
     background-color: #3A3845;
     color: white;
     cursor: pointer;
@@ -396,6 +419,7 @@ h6 {
     background-repeat: no-repeat;
     background-position: center;
 }
+
 /* ---------------------------------------------- */
 
 .tariq img{
@@ -428,6 +452,9 @@ h6 {
     .container{
         width: calc(100% - 20%);
     }
+    h2 {
+        font-size: 18px;
+    }
     .hero{
         display: flex;
         align-items: end;
@@ -452,19 +479,19 @@ h6 {
         padding: 12px 70px;
         font-size: 12px;
     }
-    .sales .container{
+    .sales .container,.blog .container{
         width: 100%;
     }
-    .sales .grid-items{
+    .sales .grid-items,.blog .grid-items{
         grid-template-columns: repeat(1, 2fr);
     }
-    .sales .grid-item-l{
+    .sales .grid-item-l,.blog .grid-item-l{
         padding: 50px 0.3px;
     }
-    .sales .grid-item-l h3{
+    .sales .grid-item-l h3,.blog .grid-item-l h3{
         font-size: 23px;
     }
-    .sales .grid-item-l p{
+    .sales .grid-item-l p,.blog .grid-item-l p{
        font-size: 12.5px;
     }
     .items .row{
@@ -474,13 +501,10 @@ h6 {
         width: 100%;
         margin-bottom: 30px;
     }
-    .best_sellers h2{
-        font-size: 24px;
-    }
-    .best_sellers .item{
+    .best_sellers .item,.discover .item{
         width: 100%;
     }
-    .best_sellers .add-to-cart{
+    .best_sellers .add-to-cart,.discover .add-to-cart{
         padding: 15px 49px;
         font-size: 11px;
     }
@@ -528,16 +552,16 @@ h6 {
         width: calc((100% - 30px)/2 );
         margin-bottom: 30px;
     }
-    .sales .container{
+    .sales .container,.blog .container{
         width: 100%;
     }
-    .sales .grid-items{
+    .sales .grid-items,.blog .grid-items{
         grid-template-columns: repeat(1, 2fr);
     }
-    .sales .grid-item-l{
+    .sales .grid-item-l,.blog .grid-item-l{
         padding: 120px 40px;
     }
-    .best_sellers .item{
+    .best_sellers .item,.discover .item{
         width: calc((100% - 30px)/2 );
     }
     .history .grid-item-t:nth-child(3){
@@ -574,13 +598,16 @@ h6 {
         width: calc((100% - 60px)/2 );
         margin-bottom: 30px;
     }
-    .sales .container{
+    .sales .container,.blog .container{
         width: 100%;
     }
-    .sales .grid-item-l{
+    .sales .grid-item-l,.blog .grid-item-l{
         padding: 120px 40px;
     }
-    .best_sellers .item{
+    .best_sellers h3, .discover h3{
+        font-size: 12px;
+    }
+    .best_sellers .item,.discover .item{
         width: calc((100% - 30px)/2 );
     }
     .history .container{
@@ -601,13 +628,13 @@ h6 {
     .hero .heroContent{
         width: 30%;
     }
-    .best_sellers h3{
+    .best_sellers h3, .discover h3{
         font-size: 12px;
     }
-     .best_sellers .price{
+    .best_sellers .price, .discover .price{
         font-size: 12px;
     }
-    .best_sellers .add-to-cart{
+    .best_sellers .add-to-cart, .discover .add-to-cart{
         padding: 15px 49px;
         font-size: 11px;
     }

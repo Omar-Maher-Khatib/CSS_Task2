@@ -17,7 +17,7 @@ h6 {
     font-family: "EB Garamond", serif;
 }
 
-/* ---------------------------------------------- */
+/* --------------------{ Container }-------------------- */
 
 .container{
     width: calc(100% - 41%);
@@ -30,7 +30,7 @@ h6 {
     align-items: center;
 }
 
-/* ---------------------------------------------- */
+/* --------------------{ Header }-------------------- */
 
 .Header{
     padding: 21.84px 0;
@@ -89,7 +89,7 @@ h6 {
     color:white;
 }
 
-/* ---------------------------------------------- */
+/* --------------------{ Hero Section }-------------------- */
 
 .hero{
     background-image: url(./../Images/hero/hero.png);
@@ -149,7 +149,7 @@ h6 {
     cursor: pointer;
 }
 
-/* ---------------------------------------------- */
+/* --------------------{ Collection Section }-------------------- */
 
 .items{
     gap: 30px;
@@ -204,7 +204,8 @@ h6 {
     opacity: 1;
 }
 
-/* ---------------------------------------------- */ 
+/* --------------------{ Sales & Blog Sections }-------------------- */
+
 .sales,.blog{
     padding: 40px 0;
     display: flex;
@@ -284,7 +285,7 @@ h6 {
     color: #c7bbb6;
 }
 
-/* ---------------------------------------------- */  
+/* --------------------{ Best Sellers & Discover Sections }-------------------- */ 
 
 .best_sellers,.discover{
     text-align: center;
@@ -353,7 +354,7 @@ h6 {
     cursor: pointer;
 }
 
-/* ---------------------------------------------- */ 
+/* --------------------{ History Section }-------------------- */
 
 .history .grid-items{
     display: grid;
@@ -428,7 +429,7 @@ h6 {
     background-position: center;
 }
 
-/* ---------------------------------------------- */
+/* --------------------{ Sign Up Section }-------------------- */
 
 .signup{
     display: flex;
@@ -487,7 +488,7 @@ h6 {
     color: #E5E5E5;
 }
 
-/* ---------------------------------------------- */
+/* --------------------{ Footer Section }-------------------- */
 
 footer{
     background-color: #3A3845;
@@ -608,7 +609,7 @@ footer ul{
 }
 
 
-/* ---------------------------------------------- */
+/* --------------------{ Omar & Tariq Sections }-------------------- */
 
 .omar img{
     position: fixed;
@@ -618,7 +619,6 @@ footer ul{
     height: auto;
     filter: drop-shadow(4px 0 10px rgba(0,0,0,0.9));
 }
-
 .tariq img{
     position: fixed;
     bottom: 0;
@@ -628,7 +628,7 @@ footer ul{
     filter: drop-shadow(4px 0 10px rgba(0,0,0,0.9));
 }
 
-/* ---------------------------------------------- */ 
+/* --------------------{ Media Query }-------------------- */ 
 
 @media screen and (min-width:0px) and (max-width: 1024px){
     .hero{
